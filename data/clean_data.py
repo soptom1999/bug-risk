@@ -8,3 +8,9 @@ df = pd.read_csv(r"E:\Software engineering projec\bug-risk\data\commits_small.cs
 print("==== Original shape ====")
 print(df.shape)
 print(df.head())
+
+# ===============================================
+# 2. CHECK BASIC INFO
+# ===============================================
+print("\n==== Data Info ====")
+print(df.info())
