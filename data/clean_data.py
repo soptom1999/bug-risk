@@ -70,3 +70,7 @@ print(df[["lines_added", "lines_deleted", "lines_changed"]])
 
 # Change density
 df["change_density"] = df["lines_changed"] / df["files_changed"].replace(0, 1)
+
+# Large commit flag
+large_threshold = df["lines_changed"].quantile(0.90)
+df["is_large_commit"] = (df["lines_changed"] > large_threshold).astype(int)
