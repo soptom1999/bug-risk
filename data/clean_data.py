@@ -65,5 +65,8 @@ for col in numeric_cols:
 # ===============================================
 # Total lines changed
 df["lines_changed"] = df["lines_added"] + df["lines_deleted"]
-# Show output
-print(df["lines_changed"])
+# Show Output
+print(df[["lines_added", "lines_deleted", "lines_changed"]])
+
+# Change density
+df["change_density"] = df["lines_changed"] / df["files_changed"].replace(0, 1)
