@@ -85,3 +85,5 @@ df["is_small_commit"] = (df["lines_changed"] < small_threshold).astype(int)
 
 print("\n==== Summary Statistics ====")
 print(df.describe())
+
+print("\nMean lines changed:", df["lines_changed"].mean())
