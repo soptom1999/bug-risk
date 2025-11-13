@@ -87,3 +87,4 @@ print("\n==== Summary Statistics ====")
 print(df.describe())
 
 print("\nMean lines changed:", df["lines_changed"].mean())
+print("Median lines changed:", df["lines_changed"].median())
