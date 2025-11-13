@@ -63,3 +63,7 @@ for col in numeric_cols:
 # ===============================================
 # 7. CREATE NEW FEATURES 
 # ===============================================
+# Total lines changed
+df["lines_changed"] = df["lines_added"] + df["lines_deleted"]
+# Show output
+print(df["lines_changed"])
