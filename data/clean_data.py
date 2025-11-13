@@ -78,3 +78,7 @@ df["is_large_commit"] = (df["lines_changed"] > large_threshold).astype(int)
 # Small commit flag
 small_threshold = df["lines_changed"].quantile(0.10)
 df["is_small_commit"] = (df["lines_changed"] < small_threshold).astype(int)
+
+# ===============================================
+# 8. PRINT SUMMARY STATISTICS (mean, median)
+# ===============================================
