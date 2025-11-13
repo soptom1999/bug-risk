@@ -57,3 +57,5 @@ df = df[~((df["files_changed"] == 0) &
 def cap_outliers(series):
     threshold = series.quantile(0.99)
     return np.where(series > threshold, threshold, series)
+for col in numeric_cols:
+    df[col] = cap_outliers(df[col])
