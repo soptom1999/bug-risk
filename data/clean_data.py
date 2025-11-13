@@ -5,3 +5,5 @@ import numpy as np
 # 1. LOAD THE ENTIRE DATASET 
 # ===============================================
 df = pd.read_csv(r"E:\Software engineering projec\bug-risk\data\commits_small.csv")
+print("==== Original shape ====")
+print(df.shape)
