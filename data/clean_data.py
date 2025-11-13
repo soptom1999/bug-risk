@@ -35,3 +35,5 @@ numeric_cols = ["files_changed", "lines_added", "lines_deleted", "message_length
 invalid_rows = df[(df[numeric_cols] < 0).any(axis=1)]
 print("\nInvalid negative rows to remove:")
 print(invalid_rows)
+
+df = df[~(df[numeric_cols] < 0).any(axis=1)]
