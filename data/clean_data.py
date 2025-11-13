@@ -59,3 +59,7 @@ def cap_outliers(series):
     return np.where(series > threshold, threshold, series)
 for col in numeric_cols:
     df[col] = cap_outliers(df[col])
+
+# ===============================================
+# 7. CREATE NEW FEATURES 
+# ===============================================
