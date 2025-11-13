@@ -44,3 +44,6 @@ df = df[~(df[numeric_cols] < 0).any(axis=1)]
 # ===============================================
 inconsistent = df[(df["files_changed"] == 0) &
                   ((df["lines_added"] > 0) | (df["lines_deleted"] > 0))]
+
+print("\nInconsistent rows to remove:")
+print(inconsistent)
