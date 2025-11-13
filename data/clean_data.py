@@ -7,3 +7,4 @@ import numpy as np
 df = pd.read_csv(r"E:\Software engineering projec\bug-risk\data\commits_small.csv")
 print("==== Original shape ====")
 print(df.shape)
+print(df.head())
