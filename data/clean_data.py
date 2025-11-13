@@ -50,3 +50,10 @@ print(inconsistent)
 
 df = df[~((df["files_changed"] == 0) &
           ((df["lines_added"] > 0) | (df["lines_deleted"] > 0)))]
+
+# ===============================================
+# 6. HANDLE OUTLIERS (cap at 99th percentile)
+# ===============================================
+def cap_outliers(series):
+    threshold = series.quantile(0.99)
+    return np.where(series > threshold, threshold, series)
