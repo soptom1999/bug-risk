@@ -47,3 +47,6 @@ inconsistent = df[(df["files_changed"] == 0) &
 
 print("\nInconsistent rows to remove:")
 print(inconsistent)
+
+df = df[~((df["files_changed"] == 0) &
+          ((df["lines_added"] > 0) | (df["lines_deleted"] > 0)))]
