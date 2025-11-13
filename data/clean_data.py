@@ -37,3 +37,10 @@ print("\nInvalid negative rows to remove:")
 print(invalid_rows)
 
 df = df[~(df[numeric_cols] < 0).any(axis=1)]
+
+# ===============================================
+# 5. REMOVE LOGICALLY INCONSISTENT ROWS
+#    (0 files changed but lines changed != 0)
+# ===============================================
+inconsistent = df[(df["files_changed"] == 0) &
+                  ((df["lines_added"] > 0) | (df["lines_deleted"] > 0))]
