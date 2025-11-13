@@ -92,4 +92,6 @@ print("Median lines changed:", df["lines_changed"].median())
 # ===============================================
 # 9. SAVE FULL CLEANED DATASET
 # ===============================================
+df.to_csv(r"E:\Software engineering projec\bug-risk\data\commits_cleaned_full.csv", index=False)
 
+print("\nFull cleaned dataset saved as commits_cleaned_full.csv")
