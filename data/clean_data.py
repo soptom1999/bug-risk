@@ -88,3 +88,8 @@ print(df.describe())
 
 print("\nMean lines changed:", df["lines_changed"].mean())
 print("Median lines changed:", df["lines_changed"].median())
+
+# ===============================================
+# 9. SAVE FULL CLEANED DATASET
+# ===============================================
+
