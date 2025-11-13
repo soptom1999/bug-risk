@@ -14,3 +14,6 @@ print(df.head())
 # ===============================================
 print("\n==== Data Info ====")
 print(df.info())
+
+print("\n==== Missing Values ====")
+print(df.isna().sum())
