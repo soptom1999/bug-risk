@@ -26,3 +26,9 @@ print("\nDuplicates before cleaning:", df.duplicated(subset="commit_hash").sum()
 df = df.drop_duplicates(subset="commit_hash", keep="first")
 
 print("Duplicates after cleaning:", df.duplicated(subset="commit_hash").sum())
+
+
+# ===============================================
+# 4. REMOVE NEGATIVE VALUES
+# ===============================================
+numeric_cols = ["files_changed", "lines_added", "lines_deleted", "message_length"]
