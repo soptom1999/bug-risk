@@ -22,3 +22,7 @@ print(df.isna().sum())
 # 3. REMOVE DUPLICATE commit_hash VALUES
 # ===============================================
 print("\nDuplicates before cleaning:", df.duplicated(subset="commit_hash").sum())
+
+df = df.drop_duplicates(subset="commit_hash", keep="first")
+
+print("Duplicates after cleaning:", df.duplicated(subset="commit_hash").sum())
